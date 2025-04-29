@@ -2,12 +2,12 @@
 """0-async_generator.py"""
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
+
     """documented"""
     for _ in range(10):
         await asyncio.sleep(1)
-        num = random.uniform(0, 10)
-        yield num
+        yield random.uniform(0, 10)
