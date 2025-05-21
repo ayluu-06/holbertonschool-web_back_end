@@ -32,7 +32,7 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """Dataset indexed by position, to allow deletion-resilient pagination"""
+        """documented"""
         if self.__indexed_dataset is None:
             dataset = self.dataset()
             self.__indexed_dataset = {
